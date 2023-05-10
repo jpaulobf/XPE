@@ -12,6 +12,9 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
     networks:
       - proxynet
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
 
   broker:
     image: confluentinc/cp-kafka:7.0.0
@@ -36,6 +39,9 @@ services:
       KAFKA_JMX_HOSTNAME: localhost
     networks:
       - proxynet
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
 
   schema-registry:
     image: confluentinc/cp-schema-registry:7.0.0
@@ -51,6 +57,9 @@ services:
       SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8081
     networks:
       - proxynet
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
 
   connect:
     image: connect-custom:1.0.0
@@ -81,6 +90,9 @@ services:
       CONNECT_LOG4J_LOGGERS: org.apache.zookeeper=ERROR,org.I0Itec.zkclient=ERROR,org.reflections=ERROR
     networks:
       - proxynet
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
 
 
   ksqldb-server:
@@ -107,6 +119,9 @@ services:
       KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE: 'true'
     networks:
       - proxynet
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
 
   ksqldb-cli:
     image: confluentinc/cp-ksqldb-cli:7.0.0
@@ -119,6 +134,9 @@ services:
     tty: true
     networks:
       - proxynet
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
 
   rest-proxy:
     image: confluentinc/cp-kafka-rest:7.0.0
@@ -136,6 +154,9 @@ services:
       KAFKA_REST_SCHEMA_REGISTRY_URL: 'http://schema-registry:8081'
     networks:
       - proxynet
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
 
   postgres:
     image: postgres:13.2
@@ -147,6 +168,9 @@ services:
       POSTGRES_PASSWORD: Ney1987
     networks:
       - proxynet
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
 
 networks:
   proxynet:
