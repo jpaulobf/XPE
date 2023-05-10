@@ -48,7 +48,7 @@ docker-compose up -d
 Em seguida, execute o gerador de dados fake.
 
 ```bash
-python simulations/make_fake_data.py
+python3 simulations/make_fake_data.py
 ```
 
 O módulo `make_fake_data.py` possui 4 argumentos que podem ser utilizados na linha de comando. Acrescente `--interval` para definir quantos segundos o simulador vai aguardar entre as simulações, `-n` para definir quantos casos serão simulados por vez, `--connection-string` ou `-cs` para definir uma string de conexão customizada (para reaproveitamento do módulo em outra database) e `--silent` caso não desejemos exibir os dados simulados na tela.
@@ -115,6 +115,19 @@ Com o arquivo, fazemos uma chamada à API do Kafka para registrar os parâmetros
 curl -X POST -H "Content-Type: application/json" \
     --data @connectors/source/connect_jdbc_postgres.config localhost:8083/connectors
 ```
+
+```bash
+docker exec -it broker bash
+
+kafka-console-consumer --bootstrap-server localhost:9092 \
+--topic postgres-customers \
+--from-beginning
+
+kafka-topics --bootstrap-server localhost:9092 \
+--describe \
+--topic postgres-customers
+```
+
 
 Este comando cria um conector que irá puxar todo o conteúdo da tabela mais todos os novos dados que forem inseridos. **Atenção**: O Kafka connect não puxa, por default, alterações feitas em registros já existentes. Puxa apenas novos registros. Para verificar se nossa configuração foi criada corretamente e o conector está ok, vamos exibir os logs.
 
