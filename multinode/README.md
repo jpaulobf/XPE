@@ -7,6 +7,9 @@ docker-compose up -d
 # get name brocker
 docker-compose ps
 
+#ver os logs dos clusters
+docker logs -f multinode_kafka-1_1
+
 # access container broker
 CONTAINER_NAME=multinode_kafka-1_1
 docker exec -it $CONTAINER_NAME bash
