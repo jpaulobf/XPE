@@ -1,4 +1,4 @@
-# Bootcamp EDC - M2 - Aula 1
+# Bootcamp EDC - M4 - Aula 1
 
 Primeira aula sobre streaming de dados com Kafka.
 
