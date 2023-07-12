@@ -267,7 +267,7 @@ Primeiro, vamos criar um stream que filtra apenas as pessoas "jovens" (aqui defi
 
 ```
 ksql> create stream jovens WITH (kafka_topic='jovens', value_format='AVRO') AS
-select nome, sexo, telefone, email, profissao, nascimento, dt_update,
+select nome, sexo, telefone, email, profissao, nascimento, dt_update
 from custstream
 WHERE nascimento >= '2000-01-01'
 emit changes;
