@@ -73,14 +73,17 @@ Será necessário executar o simulador apenas uma vez para criar a tabela na dat
 
 Vamos criar um tópico no kafka que irá armazenar os dados movidos da fonte.
 
-## docker exec -it broker bash
+```bash
+docker exec -it broker bash
 
-## kafka-topics --create \
-##    --bootstrap-server localhost:9092 \
-##    --partitions 2 \
-##    --replication-factor 1 \
-##    --topic postgres-customers
+kafka-topics --create \
+   --bootstrap-server localhost:9092 \
+   --partitions 2 \
+   --replication-factor 1 \
+   --topic postgres-customers
+```
 
+## ou
 
 ```bash
 docker exec broker \
