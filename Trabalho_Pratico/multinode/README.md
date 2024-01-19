@@ -45,14 +45,33 @@ BOOTSTRAP_SERVER=localhost:19092
 TOPIC=topico
 GROUP=grupo
 
+```
+
+8) Crie os Tópicos do Kafka (serão 3 partições e 3 réplicas):
+
+```sh
+
 # create topic with kafka cli
 kafka-topics --create --bootstrap-server $BOOTSTRAP_SERVER \
 --replication-factor 3 \
 --partitions 3 \
 --topic $TOPIC
 
+```
+
+9) Use o comando abaixo para listar os tópicos:
+
+```sh
+
 # list topics after created
 kafka-topics --list --bootstrap-server $BOOTSTRAP_SERVER
+
+
+```
+
+10) ...:
+
+```sh
 
 # configs about topic
 kafka-topics --bootstrap-server $BOOTSTRAP_SERVER \
