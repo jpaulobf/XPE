@@ -66,10 +66,9 @@ kafka-topics --create --bootstrap-server $BOOTSTRAP_SERVER \
 # list topics after created
 kafka-topics --list --bootstrap-server $BOOTSTRAP_SERVER
 
-
 ```
 
-10) ...:
+10) Use o seguinte comando para descrever os tópicos:
 
 ```sh
 
@@ -78,9 +77,21 @@ kafka-topics --bootstrap-server $BOOTSTRAP_SERVER \
 --describe \
 --topic $TOPIC
 
+```
+
+11) Crie um Produtor (para fins de testes):
+
+```sh
+
 # create producer
 kafka-console-producer --broker-list $BOOTSTRAP_SERVER \
 --topic $TOPIC
+
+```
+
+12) Mande as mensagens que quiser:
+
+```sh
 
 # send message to topic
 abc
@@ -93,19 +104,43 @@ stu
 vwx
 yza
 
+```
+
+13) Crie um Consumidor (para fins de testes):
+
+```sh
+
 kafka-console-consumer --bootstrap-server $BOOTSTRAP_SERVER \
 --topic $TOPIC \
 --from-beginning
+
+```
+
+14) Crie Consumidores baseados em cada Partição (para fins de testes):
+
+```sh
 
 # read topic and partitions
 kafka-console-consumer --bootstrap-server $BOOTSTRAP_SERVER \
 --topic $TOPIC \
 --group $GROUP
 
+```
+
+15) Leia os dados desde o início:
+
+```sh
+
 # read topic from beginning
 kafka-console-consumer --bootstrap-server $BOOTSTRAP_SERVER \
 --topic $TOPIC \
 --from-beginning
+
+```
+
+16) Encerre o exercício desprovisionando tudo:
+
+```sh
 
 # stop services
 docker-compose down
