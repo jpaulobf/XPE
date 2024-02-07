@@ -100,7 +100,7 @@ Com o arquivo, fazemos uma chamada à API do Kafka para registrar os parâmetros
 
 ```bash
 curl -X POST -H "Content-Type: application/json" \
-    --data @connectors/source/connect_jdbc_postgres_ipca.config localhost:8083/connectors
+    --data @connectors/source/connect_jdbc_postgres.config localhost:8083/connectors
 
 curl -X POST -H "Content-Type: application/json" \
     --data @connectors/source/connect_jdbc_postgres_pre.config localhost:8083/connectors
