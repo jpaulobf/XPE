@@ -13,6 +13,8 @@ Integração do Kafka com uma database (postgresql) usando *kafka connect* e ent
 - Docker
 - docker-compose
 - Uma conta AWS free tier
+- Instalar o AWS CLI (consultar no Google AWS CLI e baixar de acordo com seu SO)
+- AWS configure (colocar o ACCESS KEY E O SECRET e também sua região padrão)
 
 ## 2 - Configurar o arquivo .env_kafka_connect
 
@@ -24,11 +26,12 @@ AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ## 3 - Buildar a imagem do kafka-connect
-Após clonar o repositório, mude para a pasta `custom-kafka-connectors-image`, execute o seguinte comando:
+Após clonar o repositório, mude para a pasta `custom-kafka-connector-image`, execute o seguinte comando:
 
 ```bash
-cd connect/custom-kafka-connectors-image
+cd connect/custom-kafka-connector-image
 docker build . -t connect-custom:1.0.0
+docker buildx build . -t connect-custom:1.0.0
 ```
 Uma nova imagem com o nome `connect-custom` e tag ` 1.0.0` será criada. Essa é a imagem que nosso serviço `connect` dentro do `docker-compose.yml` irá utilizar, com os conectores que precisaremos instalados.
 
