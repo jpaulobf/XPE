@@ -158,20 +158,6 @@ services:
       - "/etc/timezone:/etc/timezone:ro"
       - "/etc/localtime:/etc/localtime:ro"
 
-  postgres:
-    image: postgres:13.2
-    ports:
-      - 5432:5432
-    hostname: postgres
-    container_name: postgres
-    environment: 
-      POSTGRES_PASSWORD: Ney1987
-    networks:
-      - proxynet
-    volumes:
-      - "/etc/timezone:/etc/timezone:ro"
-      - "/etc/localtime:/etc/localtime:ro"
-
 networks:
   proxynet:
     name: custom_network

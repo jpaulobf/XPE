@@ -1,7 +1,5 @@
 # Data Ingestion com Kafka e Kafka Connect
 
-### Prof. Neylson Crepalde
-
 Exercício para praticar uma pipeline de Streaming de Dados com Kafka. Vamos implementar a seguinte arquitetura:
 
 Integração do Kafka com uma database (postgresql) usando *kafka connect* e entrega em data lake com *kafka connect*. Todos os serviços que compõem o kafka e a database PostgreSQL que servirá de fonte serão implantadas com `docker-compose`.
@@ -15,6 +13,8 @@ Integração do Kafka com uma database (postgresql) usando *kafka connect* e ent
 - Docker
 - docker-compose
 - Uma conta AWS free tier
+- Instalar o AWS CLI (consultar no Google AWS CLI e baixar de acordo com seu SO)
+- AWS configure (colocar o ACCESS KEY E O SECRET e também sua região padrão)
 
 ## 2 - Configurar o arquivo .env_kafka_connect
 
@@ -26,11 +26,12 @@ AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ## 3 - Buildar a imagem do kafka-connect
-Após clonar o repositório, mude para a pasta `custom-kafka-connectors-image`, execute o seguinte comando:
+Após clonar o repositório, mude para a pasta `custom-kafka-connector-image`, execute o seguinte comando:
 
 ```bash
-cd connect/custom-kafka-connectors-image
+cd connect/custom-kafka-connector-image
 docker build . -t connect-custom:1.0.0
+docker buildx build . -t connect-custom:1.0.0
 ```
 Uma nova imagem com o nome `connect-custom` e tag ` 1.0.0` será criada. Essa é a imagem que nosso serviço `connect` dentro do `docker-compose.yml` irá utilizar, com os conectores que precisaremos instalados.
 
@@ -76,7 +77,19 @@ Será necessário executar o simulador apenas uma vez para criar a tabela na dat
 Vamos criar um tópico no kafka que irá armazenar os dados movidos da fonte.
 
 ```bash
-docker-compose exec broker \
+docker exec -it broker bash
+
+kafka-topics --create \
+   --bootstrap-server localhost:9092 \
+   --partitions 2 \
+   --replication-factor 1 \
+   --topic postgres-customers
+```
+
+## ou
+
+```bash
+docker exec broker \
     kafka-topics --create \
     --bootstrap-server localhost:9092 \
     --partitions 2 \
@@ -98,7 +111,7 @@ Para isso, vamos precisar de um arquivo no formato `json` contendo as configura�
         "tasks.max": 1,    
         "connection.url": "jdbc:postgresql://postgres:5432/postgres",
         "connection.user": "postgres",
-        "connection.password": "SUA-SENHA",
+        "connection.password": "Jp1987",
         "mode": "timestamp",
         "timestamp.column.name": "dt_update",
         "table.whitelist": "public.customers",
@@ -236,8 +249,7 @@ ksql> select * from custstream emit changes;
 O output dessa consulta não é dos melhores pois há um número grande de colunas, dificultando a visualização. Podemos fazer uma consulta mais enxuta com o seguinte código:
 
 ```
-ksql> select nome, telefone, email, nascimento, dt_update
->from custstream emit changes;
+ksql> select nome, telefone, email, nascimento, dt_update from custstream emit changes;
 ```
 
 A consulta retorna a seguinte tabela:
@@ -258,10 +270,10 @@ Primeiro, vamos criar um stream que filtra apenas as pessoas "jovens" (aqui defi
 
 ```
 ksql> create stream jovens WITH (kafka_topic='jovens', value_format='AVRO') AS
->select nome, sexo, telefone, email, profissao, nascimento, dt_update,
->from custstream
->WHERE nascimento >= '2000-01-01'
->emit changes;
+select nome, sexo, telefone, email, profissao, nascimento, dt_update
+from custstream
+WHERE nascimento >= '2000-01-01'
+emit changes;
 ```
 
 Se checarmos novamente as streams,
@@ -281,24 +293,24 @@ Agora, vamos criar um stream que fará a classificação das pessoas entre joven
 
 ```
 ksql> create stream idadeclass WITH (kafka_topic='idadeclass', value_format='AVRO') AS
->select nome, telefone, email, profissao,
->CASE
->WHEN nascimento >= '2000-01-01' THEN 'JOVEM'
->ELSE 'ADULTO' END AS idadecat,
->dt_update
->from custstream
->emit changes;
+select nome, telefone, email, profissao,
+CASE
+WHEN nascimento >= '2000-01-01' THEN 'JOVEM'
+ELSE 'ADULTO' END AS idadecat,
+dt_update
+from custstream
+emit changes;
 ```
 
 E depois
 
 ```
 ksql> create table idadecont WITH (kafka_topic='idadecont', value_format='AVRO') AS
->select idadecat, count(idadecat) as contagem
->from idadeclass
->window tumbling (size 30 seconds)
->group by idadecat
->emit changes;
+select idadecat, count(idadecat) as contagem
+from idadeclass
+window tumbling (size 30 seconds)
+group by idadecat
+emit changes;
 ```
 
 E teremos uma tabela contando cada caso de JOVEM e ADULTO para cada intervalo de 30 segundos.
