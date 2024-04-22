@@ -28,7 +28,7 @@ Após clonar o repositório, mude para a pasta `custom-kafka-connectors-image`, 
 
 ```bash
 cd connect/custom-kafka-connectors-image
-docker build . -t connect-custom:1.0.0
+docker buildx build . -t connect-custom:1.0.0
 ```
 Uma nova imagem com o nome `connect-custom` e tag ` 1.0.0` será criada. Essa é a imagem que nosso serviço `connect` dentro do `docker-compose.yml` irá utilizar, com os conectores que precisaremos instalados.
 
