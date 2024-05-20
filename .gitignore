@@ -1,0 +1,8 @@
+.vscode
+Flink-Kafka/python/__pycache__/*
+Flink-Kafka/python/__pycache__/faker.cpython-310.pyc
+Flink-Kafka/python/__pycache__/faker.cpython-312.pyc
+Flink-Kafka/java/demo2/.idea
+Flink-Kafka/java/demo2/.idea/*
+Flink-Kafka/java/demo2/.idea/misc.xml
+Flink-Kafka/java/demo2/.idea/misc.xml

@@ -1,8 +1,8 @@
 # Data Ingestion com Kafka e Apache Flink
 
-Exercício para praticar uma pipeline de Streaming de Dados com Kafka. Vamos implementar a seguinte arquitetura:
+Exercício para praticar uma pipeline de Streaming de Dados com Kafka + Flink. Vamos implementar a seguinte arquitetura:
 
-Integração do Kafka com uma database (postgresql) usando *kafka connect* e entrega em data lake com *kafka connect*. Todos os serviços que compõem o kafka e a database PostgreSQL que servirá de fonte serão implantadas com `docker-compose`.
+Integração do Kafka com o Apache Flink que processará os dados e os enviará a uma database (postgresql). Todos os serviços que compõem o kafka, flink e a database PostgreSQL que servirá de fonte serão implantados com `docker-compose`.
 
 ---
 
@@ -13,19 +13,24 @@ Integração do Kafka com uma database (postgresql) usando *kafka connect* e ent
 - Docker
 - docker-compose
 - Uma conta no Docker Hub
+- Python 3
+    - Faker
+    - Confluent_Kafka
+    - SimpleJson
 
-## 2 - Buildar a imagem do kafka-connect
-Após clonar o repositório, mude para a pasta `custom-kafka-connectors-image`, execute o seguinte comando:
+## 2 - Subir o ambiente
+Com os prerequisitos instalados e testados, baixar o projeto no GitHub e entrar na pasta `Flink-Kafka`, execute o seguinte comando:
 
 ```bash
-cd connect/custom-kafka-connectors-image
-docker build . -t connect-custom:1.0.0
+cd docker
+docker-compose up -d
 ```
-Uma nova imagem com o nome `connect-custom` e tag ` 1.0.0` será criada. Essa é a imagem que nosso serviço `connect` dentro do `docker-compose.yml` irá utilizar, com os conectores que precisaremos instalados.
+O ambiente será baixado e provisionado em sua máquina, conforme desenho arquitetural descrito na pasta `arquitetura`.
 
-## 4 - Subir o PostgreSQL
+## 3 - Executar os dados fakes
 
-No arquivo `docker-compose.yml` na pasta `postgres` estamos subindo o banco de dados.
+No arquivo `docker-compose.yml
+` na pasta `postgres` estamos subindo o banco de dados.
 
 ## 5 - Processar o ETL
 
