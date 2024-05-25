@@ -1,18 +1,11 @@
 import os
-import struct
 
-from pyspark.sql import SparkSession
-from pyspark.sql.types import StructType,StructField,FloatType,IntegerType,StringType,TimestampType
-from pyspark.sql.functions import from_json,col, to_json
+from pyspark.sql import SparkSession # type: ignore
+from pyspark.sql.types import StructType,StructField,FloatType,IntegerType,StringType,TimestampType # type: ignore
+from pyspark.sql.functions import from_json,col, to_json # type: ignore
 from struct import Struct
 
-def writeToKafka(writeDF, _):
-    writeDF.write \
-                .format("kafka")\
-                .option("kafka.bootstrap.servers", "172.17.0.1:9092") \
-                .option("topic", "sales-transactions-2") \
-                .save()
-
+#Cria uma struct
 transactionSchema = StructType([
                         StructField("transactionId",StringType(),False),
                         StructField("productId",StringType(),False),
@@ -27,6 +20,7 @@ transactionSchema = StructType([
                         StructField("paymentMethod",StringType(),False)
                         ])
 
+#Cria a sessão do Spark
 spark = SparkSession \
         .builder \
         .appName("SparkStructuredStreaming") \
@@ -40,43 +34,33 @@ spark = SparkSession \
                               os.getcwd() + "/jars/spark-token-provider-kafka-0-10_2.12-3.0.0.jar") \
         .getOrCreate()
 
-spark.sparkContext.setLogLevel("ERROR")
+#Informa o nivel de log
+spark.sparkContext.setLogLevel("INFO")
 
-df = spark \
+#Conecta-se com o Kafka de Origem
+source_data = spark \
         .readStream \
         .format("kafka") \
         .option("kafka.bootstrap.servers", "172.17.0.1:9092") \
         .option("subscribe", "sales-transactions") \
         .option("startingOffsets", "earliest") \
         .load() 
+source_data.printSchema()
 
-df1 = df.select(from_json(col("value").cast("string"),transactionSchema).alias("value"))
+#Converte o binário em JSON
+source_data = source_data.selectExpr("CAST(value AS STRING)").select(from_json(col("value"),transactionSchema).alias("data")).select("data.*")
+source_data.printSchema()
 
-df_exp = df1.select("value.transactionId", 
-                    "value.productId", 
-                    "value.productName", 
-                    "value.productCategory", 
-                    "value.productPrice", 
-                    "value.productQuantity", 
-                    "value.productBrand", 
-                    "value.currency",
-                    "value.customerId",
-                    "value.transactionDate",
-                    "value.paymentMethod")
+#[TODO:]
+#Transformar os dados....
+transformed_data = source_data.withColumn("timestamp", col('productPrice'))
+transformed_data.printSchema()
 
-df_exp.printSchema()
-
-#.foreachBatch(writeToKafka) \
-
-df_exp.writeStream \
-        .format("json") \
-        .queryName("Q Name") \
-        .outputMode("append") \
-        .option("path", "output") \
-        .option("checkpointLocation", "chk-point-dir") \
-        .trigger(processingTime="5 second") \
-        .start()\
-        .awaitTermination()
-
-df_exp.show()
-
+#Envia para o Kafka de Destino
+transformed_data.selectExpr("to_json(struct(*)) AS value") \
+    .writeStream \
+    .format("kafka") \
+    .option("kafka.bootstrap.servers", "172.17.0.1:9093") \
+    .option("topic", "sales-transactions-2") \
+    .option("checkpointLocation", "chk-point-dir") \
+    .start().awaitTermination()
