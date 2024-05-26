@@ -5,21 +5,6 @@ from pyspark.sql.types import StructType,StructField,FloatType,IntegerType,Strin
 from pyspark.sql.functions import from_json,col, to_json # type: ignore
 from struct import Struct
 
-#Cria uma struct
-transactionSchema = StructType([
-                        StructField("transactionId",StringType(),False),
-                        StructField("productId",StringType(),False),
-                        StructField("productName",StringType(),False),
-                        StructField("productCategory",StringType(),False),
-                        StructField("productPrice",FloatType(),False),
-                        StructField("productQuantity",IntegerType(),False),
-                        StructField("productBrand",StringType(),False),
-                        StructField("currency",StringType(),False),
-                        StructField("customerId",StringType(),False),
-                        StructField("transactionDate",TimestampType(),False),
-                        StructField("paymentMethod",StringType(),False)
-                        ])
-
 #Cria a sessão do Spark
 spark = SparkSession \
         .builder \
@@ -46,6 +31,21 @@ source_data = spark \
         .option("startingOffsets", "earliest") \
         .load() 
 source_data.printSchema()
+
+#Cria uma struct
+transactionSchema = StructType([
+                        StructField("transactionId",StringType(),False),
+                        StructField("productId",StringType(),False),
+                        StructField("productName",StringType(),False),
+                        StructField("productCategory",StringType(),False),
+                        StructField("productPrice",FloatType(),False),
+                        StructField("productQuantity",IntegerType(),False),
+                        StructField("productBrand",StringType(),False),
+                        StructField("currency",StringType(),False),
+                        StructField("customerId",StringType(),False),
+                        StructField("transactionDate",TimestampType(),False),
+                        StructField("paymentMethod",StringType(),False)
+                        ])
 
 #Converte o binário em JSON
 source_data = source_data.selectExpr("CAST(value AS STRING)").select(from_json(col("value"),transactionSchema).alias("data")).select("data.*")
