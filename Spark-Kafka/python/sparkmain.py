@@ -51,9 +51,8 @@ transactionSchema = StructType([
 source_data = source_data.selectExpr("CAST(value AS STRING)").select(from_json(col("value"),transactionSchema).alias("data")).select("data.*")
 source_data.printSchema()
 
-#[TODO:]
 #Transformar os dados....
-transformed_data = source_data.withColumn("timestamp", col('productPrice'))
+transformed_data = source_data.withColumn("totalAmount", col('productPrice') * col('productQuantity'))
 transformed_data.printSchema()
 
 #Envia para o Kafka de Destino
@@ -61,6 +60,6 @@ transformed_data.selectExpr("to_json(struct(*)) AS value") \
     .writeStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "172.17.0.1:9093") \
-    .option("topic", "sales-transactions-2") \
+    .option("topic", "transformed-transactions") \
     .option("checkpointLocation", "chk-point-dir") \
     .start().awaitTermination()
