@@ -42,7 +42,7 @@ def main():
         try:
 
             transaction = generate_sales_transaction()
-            transaction['totalAmount'] = transaction['productPrice'] * transaction['productQuantity']
+            #transaction['totalAmount'] = transaction['productPrice'] * transaction['productQuantity']
 
             producer.produce(
                 topic,
