@@ -67,12 +67,12 @@ http://localhost:8081
 
 ## 7 - Verifique se o Job está executando corretamente
 
-Na aba Jobs \ Running Jobs verifique se seu Job está apresentando o estado "Azul" (o estado "Vermelho" deve desaparecer em poucos segundos).
+Na aba `Jobs \ Running Jobs` verifique se seu Job está apresentando o estado `Azul` (o estado `Vermelho` deve desaparecer em poucos segundos).
 
 
 ## 8 - Gere mais dados pelo Python
 
-Volte ao terminal e execute novamente nosso programa "main.py"
+Volte ao terminal e execute novamente nosso programa `main.py`
 
 Na pasta `python` executar a geração dos dados com o comando:
 ```bash
