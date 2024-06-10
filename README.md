@@ -8,4 +8,4 @@ Siga os READMEs em cada uma das pastas dos exercícios:
     - Exercício 1 - Pasta `Trabalho Prático \ connect`
 
 - Desafio
-    - Exercício 1 - Pasta `Desafio \ Spark`
+    - Exercício 1 - Pasta `Desafio \ Flink`
