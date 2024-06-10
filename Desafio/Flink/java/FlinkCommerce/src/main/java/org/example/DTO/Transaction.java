@@ -24,8 +24,6 @@ public class Transaction {
         return cal.get(Calendar.MONTH);
     }
 
-    private int month;
-
     public Transaction() {
     }
 

@@ -2,8 +2,6 @@ package org.example.DTO;
 
 import org.apache.flink.api.common.functions.ReduceFunction;
 
-import java.sql.Timestamp;
-
 public class AmountReduce implements ReduceFunction<Transaction> {
     @Override
     public Transaction reduce(Transaction in1, Transaction in2) {

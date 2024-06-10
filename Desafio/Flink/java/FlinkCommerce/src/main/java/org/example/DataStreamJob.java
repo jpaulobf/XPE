@@ -10,7 +10,6 @@ import org.apache.flink.connector.kafka.source.enumerator.initializer.OffsetsIni
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.example.DTO.AmountReduce;
-import org.example.DTO.SalesTransaction;
 import org.example.DTO.Transaction;
 import org.example.JSON.JSONDeserializerTransaction;
 import java.sql.Timestamp;
