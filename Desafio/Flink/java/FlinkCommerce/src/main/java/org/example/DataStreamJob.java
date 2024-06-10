@@ -9,6 +9,8 @@ import org.apache.flink.connector.kafka.source.KafkaSource;
 import org.apache.flink.connector.kafka.source.enumerator.initializer.OffsetsInitializer;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.example.DTO.AmountReduce;
+import org.example.DTO.SalesTransaction;
 import org.example.DTO.Transaction;
 import org.example.JSON.JSONDeserializerTransaction;
 import java.sql.Timestamp;
@@ -54,26 +56,26 @@ public class DataStreamJob {
 												.build();
 
 		//cria a tabela de transações
-		dataStream.addSink(JdbcSink.sink(
-				"CREATE TABLE IF NOT EXISTS transactions (" +
-						"transaction_id VARCHAR(255) PRIMARY KEY, " +
-						"product_id VARCHAR(255), " +
-						"product_name VARCHAR(255), " +
-						"product_category VARCHAR(255), " +
-						"product_price DOUBLE PRECISION, " +
-						"product_quantity INTEGER, " +
-						"product_brand VARCHAR(255), " +
-						"total_amount DOUBLE PRECISION, " +
-						"currency VARCHAR(255), " +
-						"customer_id VARCHAR(255), " +
-						"transaction_date TIMESTAMP, " +
-						"payment_method VARCHAR(255) " +
-						")", (JdbcStatementBuilder<Transaction>) (preparedStatement, transaction) -> {
+		transactionStream.addSink(JdbcSink.sink(
+					"CREATE TABLE IF NOT EXISTS transactions (" +
+							"transaction_id VARCHAR(255) PRIMARY KEY, " +
+							"product_id VARCHAR(255), " +
+							"product_name VARCHAR(255), " +
+							"product_category VARCHAR(255), " +
+							"product_price DOUBLE PRECISION, " +
+							"product_quantity INTEGER, " +
+							"product_brand VARCHAR(255), " +
+							"total_amount DOUBLE PRECISION, " +
+							"currency VARCHAR(255), " +
+							"customer_id VARCHAR(255), " +
+							"transaction_date TIMESTAMP, " +
+							"payment_method VARCHAR(255) " +
+							")", (JdbcStatementBuilder<Transaction>) (preparedStatement, transaction) -> {
 
 				}, executionOptions, connectionOptions)).name("A tabela de transação foi criada com sucesso");
 
 		//insere na tabela de transações
-		dataStream.addSink(JdbcSink.sink(
+		transactionStream.addSink(JdbcSink.sink(
 					"INSERT INTO transactions(transaction_id, product_id, product_name, product_category, product_price, " +
 							"product_quantity, product_brand, total_amount, currency, customer_id, transaction_date, payment_method) " +
 							"VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) " +
@@ -107,18 +109,22 @@ public class DataStreamJob {
 					.name("A transação foi inserida com sucesso");
 
 		//cria a tabela de vendas_por_categoria
-		dataStream.addSink(JdbcSink.sink(
+		transactionStream.addSink(JdbcSink.sink(
 			"CREATE TABLE IF NOT EXISTS sales_per_category (" +
 					"sales_per_category_id TIMESTAMP PRIMARY KEY, " +
 					"product_category VARCHAR(255), " +
 					"total_amount DOUBLE PRECISION " +
-					")", (JdbcStatementBuilder<SalesTransaction>) (preparedStatement, salesTransaction) -> {
+					")", (JdbcStatementBuilder<Transaction>) (preparedStatement, salesTransaction) -> {
 
 			}, executionOptions, connectionOptions)).name("A tabela de vendas_por_categoria foi criada com sucesso");
 
+		//filtra por mês e consolida o total
+		transactionStream.map(transaction -> {
+			return transaction;
+		}).keyBy(Transaction::getMonth).reduce(new AmountReduce());
 
 		//insere na tabela de vendas_por_categoria
-		dataStream.addSink(JdbcSink.sink(
+		transactionStream.addSink(JdbcSink.sink(
 			"INSERT INTO sales_per_category(sales_per_category_id, product_category, total_amount) " +
 					"VALUES (?, ?, ?) " +
 					"ON CONFLICT (sales_per_category_id) DO UPDATE SET " +
@@ -126,7 +132,7 @@ public class DataStreamJob {
 					"product_category  = EXCLUDED.product_category, " +
 					"total_amount  = EXCLUDED.total_amount " +
 					"WHERE sales_per_category.sales_per_category_id = EXCLUDED.sales_per_category_id",
-		(JdbcStatementBuilder<SalesTransaction>) (preparedStatement, salesTransaction) -> {
+		(JdbcStatementBuilder<Transaction>) (preparedStatement, salesTransaction) -> {
 				preparedStatement.setTimestamp(1, new Timestamp(System.currentTimeMillis()));
 				preparedStatement.setString(2, salesTransaction.getProductCategory());
 				preparedStatement.setDouble(3, salesTransaction.getTotalAmount());

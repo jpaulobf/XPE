@@ -1,6 +1,7 @@
 package org.example.DTO;
 
 import java.sql.Timestamp;
+import java.util.Calendar;
 
 public class Transaction {
 
@@ -16,6 +17,14 @@ public class Transaction {
     private Timestamp transactionDate;
     private String paymentMethod;
     private double totalAmount;
+
+    public int getMonth() {
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(transactionDate.getTime());
+        return cal.get(Calendar.MONTH);
+    }
+
+    private int month;
 
     public Transaction() {
     }
