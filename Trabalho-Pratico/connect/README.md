@@ -111,7 +111,7 @@ Para isso, vamos precisar de um arquivo no formato `json` contendo as configura√
         "tasks.max": 1,    
         "connection.url": "jdbc:postgresql://postgres:5432/postgres",
         "connection.user": "postgres",
-        "connection.password": "Jp1987",
+        "connection.password": "postgres",
         "mode": "timestamp",
         "timestamp.column.name": "dt_update",
         "table.whitelist": "public.customers",
