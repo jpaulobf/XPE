@@ -133,7 +133,7 @@ curl -X POST -H "Content-Type: application/json" \
 docker exec -it broker bash
 
 kafka-console-consumer --bootstrap-server localhost:9092 \
---topic sales-transactions \
+--topic postgres-customers \
 --from-beginning
 
 kafka-topics --bootstrap-server localhost:9092 \
