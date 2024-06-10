@@ -164,7 +164,7 @@ services:
     hostname: postgres
     container_name: postgres
     environment: 
-      POSTGRES_PASSWORD: Jp1987
+      POSTGRES_PASSWORD: postgres
     networks:
       - proxynet
     volumes:
