@@ -4,7 +4,7 @@ import numpy as np
 from sqlalchemy import create_engine
 from faker import Faker
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # função para parsear a saída do parâmetro SILENT
 def str2bool(v):
@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
     print("Iniciando a simulacao...", end="\n\n")
 
-    # Gera dados fake a faz ingestáo
+    # Gera dados fake a faz ingestão
     while True:
         nome       = [faker.name() for i in range(args.n)]
         gender     = [np.random.choice(["M", "F"], p=[0.5, 0.5]) for i in range(args.n)]
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         foto       = [faker.image_url() for i in range(args.n)]
         nascimento = [faker.date_of_birth().strftime("%Y-%m-%d") for i in range(args.n)]
         profissao  = [faker.job() for i in range(args.n)]
-        dt_update  = [datetime.now() for i in range(args.n)]
+        dt_update  = [datetime.now() - timedelta(hours=1, minutes=0) for i in range(args.n)]
 
         df = pd.DataFrame({
             "nome": nome,
