@@ -417,17 +417,6 @@ nohup docker exec broker kafka-console-consumer --bootstrap-server localhost:909
 --topic postgres-dadostesouropre \
 --from-beginning > nohup-postgres-dadostesouropre.log 2>&1 &
 
-# Descrever os tópicos
-echo
-echo "Descrevendo os tópicos..."
-docker exec broker kafka-topics --bootstrap-server localhost:9092 \
---describe \
---topic postgres-dadostesouroipca
-
-docker exec broker kafka-topics --bootstrap-server localhost:9092 \
---describe \
---topic postgres-dadostesouropre
-
 # Subir os sink connectors para entregar os dados ao S3
 echo
 echo "Subindo os sink connectors para entregar os dados ao S3..."
