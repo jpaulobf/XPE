@@ -27,10 +27,10 @@ show_help() {
     echo "  --connector-status    Verificar o status dos connectors"
     echo "  --connectors-list     Listar todos os connectors"
     echo "  --connector-restart   Reiniciar um connector específico"
-    echo "  --s3-list-files       Listar arquivos de um bucket e um diretório"
-    echo "  --s3-list-buckets     Listar todos os buckets"
-    echo "  --s3-create-bucket    Criar um novo bucket"
-    echo "  --s3-delete-bucket    Excluir um bucket"
+    echo "  --s3-list-files       Listar os arquivos de um bucket e um caminho específico"
+    echo "  --s3-list-buckets     Listar todos os buckets no S3"
+    echo "  --s3-create-bucket    Criar um novo bucket no S3"
+    echo "  --s3-delete-bucket    Excluir um bucket no S3"
     echo "  --help                Exibir esta ajuda e sair"
     echo
     echo "Exemplos:"
@@ -63,7 +63,8 @@ fi
 
 # Verificar se o AWS CLI está instalado
 if ! command -v aws &> /dev/null; then
-    echo -e "${RED}Erro: AWS CLI não está instalado. Instale o AWS CLI e tente novamente.${NC}"
+    echo -e "${RED}Erro: AWS CLI não está instalado."
+    echo -e "Para instalar, siga as instruções em: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html${NC}"
     exit 1
 fi
 
