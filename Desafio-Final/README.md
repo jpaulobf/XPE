@@ -27,7 +27,6 @@ que pode ser difícil de ler e manipular diretamente na linha de comando.
 O `jq` facilita isso, permitindo que seja possível extrair e formatar as informações 
 de maneira mais legível e utilizável.
 
-
 ### Ubuntu/Debian
 ```
 sudo apt-get update
