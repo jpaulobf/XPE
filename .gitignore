@@ -1,4 +1,6 @@
 .vscode
+*.log
+.env_kafka_connect
 Flink-Kafka/python/__pycache__/*
 Flink-Kafka/python/__pycache__/faker.cpython-310.pyc
 Flink-Kafka/python/__pycache__/faker.cpython-312.pyc
