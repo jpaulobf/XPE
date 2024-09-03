@@ -1,0 +1,5 @@
+org\example\DTO\Transaction.class
+org\example\DataStreamJob.class
+org\example\DTO\SalesTransaction.class
+org\example\DTO\AmountReduce.class
+org\example\JSON\JSONDeserializerTransaction.class
