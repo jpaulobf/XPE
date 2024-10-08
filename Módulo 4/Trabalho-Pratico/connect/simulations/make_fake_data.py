@@ -59,7 +59,8 @@ if __name__ == "__main__":
         foto       = [faker.image_url() for i in range(args.n)]
         nascimento = [faker.date_of_birth().strftime("%Y-%m-%d") for i in range(args.n)]
         profissao  = [faker.job() for i in range(args.n)]
-        dt_update  = [datetime.now() - timedelta(hours=1, minutes=0) for i in range(args.n)]
+        dt_update  = [datetime.now() for i in range(args.n)]
+        # dt_update  = [datetime.now() - timedelta(hours=1, minutes=0) for i in range(args.n)]
 
         df = pd.DataFrame({
             "nome": nome,
