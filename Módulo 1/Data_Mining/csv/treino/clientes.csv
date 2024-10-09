@@ -1,0 +1,201 @@
+Nome,Data de Nascimento,Sexo,Profissão,Data de Início no Último Emprego,Empregado,Salário Atual,Estado Civil,Número de Filhos,Score de Crédito
+Kevin Wood,1989-09-20,Feminino,"Conservator, museum/gallery",2017-08-12,True,10727.15,Casado,1,717
+James Maynard,1969-03-06,Feminino,Medical illustrator,2024-08-09,True,5993.71,Casado,5,663
+Jonathan Taylor,2001-09-02,Masculino,"Editor, magazine features",2024-09-19,True,8059.38,Casado,0,477
+Daniel Crawford,1974-09-12,Masculino,Clinical psychologist,2015-05-17,True,10728.06,Casado,3,601
+Brittany White,1971-10-20,Masculino,"Therapist, horticultural",,False,0.0,Casado,0,606
+Laura Gonzales,1982-12-07,Feminino,Land/geomatics surveyor,2023-03-31,True,1278.26,Divorciado,5,692
+Christopher Henry,1965-04-25,Feminino,Armed forces training and education officer,2017-11-23,True,6789.52,Solteiro,3,650
+Carla King,1969-07-09,Masculino,Web designer,,False,0.0,Solteiro,4,649
+Christina Hayes,1979-05-01,Feminino,Magazine features editor,,False,0.0,Viúvo,3,472
+Matthew Cameron,1961-12-09,Feminino,"Surveyor, planning and development",2017-09-27,True,13034.68,Viúvo,0,732
+Shawn Buckley,1983-03-10,Feminino,Management consultant,2016-09-04,True,13074.34,Viúvo,0,304
+Sandra Chung,1985-04-02,Masculino,Accounting technician,,False,0.0,Solteiro,2,821
+Cassandra Sullivan,1983-04-09,Masculino,"Surveyor, commercial/residential",2019-08-31,True,11393.07,Casado,4,820
+Nicole Holland,1981-08-24,Feminino,Operational investment banker,2021-09-04,True,5254.36,Viúvo,2,767
+Jodi Morgan,2000-07-03,Masculino,Lobbyist,2016-03-13,True,14819.56,Viúvo,3,587
+Dr. Stephanie Johnson,1959-03-12,Feminino,Mining engineer,2017-07-04,True,12824.31,Divorciado,2,543
+Mark Brown,2000-01-10,Feminino,"Engineer, structural",2016-12-11,True,12668.14,Divorciado,3,689
+Carol Rodriguez,1971-01-13,Feminino,Psychotherapist,2021-06-13,True,1421.06,Casado,1,371
+Brian Olsen,1998-08-05,Feminino,Trading standards officer,2023-06-19,True,4039.01,Casado,3,330
+Sheri Wood,1986-01-07,Masculino,"Nurse, learning disability",,False,0.0,Viúvo,4,773
+David Mitchell,1997-10-18,Masculino,Academic librarian,,False,0.0,Viúvo,2,471
+Tammy Roy,1956-11-13,Masculino,Physiotherapist,,False,0.0,Divorciado,0,772
+Dylan Obrien,1994-10-10,Feminino,"Physicist, medical",2016-04-21,True,6313.16,Viúvo,4,400
+Kevin James,1969-06-26,Masculino,Heritage manager,2020-12-24,True,6461.41,Divorciado,2,841
+Michael Yu,1974-04-21,Masculino,Merchant navy officer,2023-03-31,True,5026.17,Divorciado,3,703
+Todd Black,1998-02-01,Masculino,Contractor,,False,0.0,Viúvo,3,559
+Mark Lin,1978-11-09,Masculino,Web designer,2020-07-14,True,2310.67,Divorciado,3,410
+Amy Savage,1969-01-21,Feminino,Homeopath,,False,0.0,Divorciado,1,848
+Felicia Scott,1974-01-26,Masculino,Event organiser,2016-08-24,True,6276.88,Casado,5,756
+Kendra Smith,2006-08-08,Masculino,"Teacher, secondary school",2023-10-30,True,11484.63,Divorciado,0,300
+Tiffany Anderson,1954-12-10,Feminino,Tourist information centre manager,,False,0.0,Casado,4,510
+Curtis Walsh,1974-05-17,Feminino,"Engineer, petroleum",2023-09-19,True,3705.36,Casado,1,607
+Cody Clark,1960-08-01,Feminino,Video editor,2024-03-06,True,10596.11,Solteiro,0,484
+Casey Smith,2005-03-15,Feminino,Ship broker,,False,0.0,Viúvo,3,534
+William Gordon,1961-09-26,Masculino,"Engineer, manufacturing systems",2018-05-25,True,10769.35,Solteiro,5,384
+Dana Pacheco,1969-01-11,Masculino,Chartered certified accountant,,False,0.0,Divorciado,0,599
+Jason Gomez MD,1993-10-05,Feminino,Web designer,,False,0.0,Divorciado,3,649
+Kelly Hoffman,1980-10-18,Masculino,Publishing rights manager,2022-12-17,True,8453.62,Divorciado,3,355
+Virginia Baird,1976-03-24,Masculino,Metallurgist,2019-04-30,True,9808.9,Solteiro,3,684
+Mark Phillips,1984-09-03,Feminino,Facilities manager,2023-07-03,True,13501.55,Solteiro,4,405
+Thomas Snyder,1992-01-27,Masculino,"Investment banker, corporate",2017-05-12,True,13817.78,Solteiro,1,749
+Alan Palmer,2002-09-14,Feminino,Agricultural consultant,,False,0.0,Solteiro,2,706
+Brian Ross,1985-11-09,Feminino,Adult guidance worker,2015-12-15,True,14229.92,Solteiro,0,512
+Amanda Anderson,2001-12-28,Masculino,Systems analyst,,False,0.0,Viúvo,4,832
+Bobby Fischer,1981-04-12,Feminino,Graphic designer,,False,0.0,Solteiro,0,451
+Scott Jimenez,1993-02-19,Masculino,Analytical chemist,2015-03-19,True,10888.5,Casado,0,542
+Jonathan Scott,2005-04-06,Masculino,"Buyer, industrial",2016-05-01,True,14176.98,Viúvo,2,385
+Rachel Ferguson,1953-12-04,Feminino,Medical illustrator,,False,0.0,Casado,1,343
+Jennifer Mccullough,1956-04-08,Feminino,"Production designer, theatre/television/film",2021-10-07,True,13954.03,Casado,5,473
+Jose Bell,1977-11-05,Masculino,Accounting technician,,False,0.0,Casado,5,385
+Charles Cantrell,1989-10-13,Feminino,Primary school teacher,,False,0.0,Casado,4,553
+Samantha Floyd,1990-04-05,Masculino,Herbalist,,False,0.0,Divorciado,0,677
+James Stewart,1982-08-10,Masculino,Insurance account manager,,False,0.0,Casado,4,609
+Russell West,1972-07-05,Feminino,Teaching laboratory technician,2023-09-05,True,6559.19,Divorciado,5,705
+Dalton Rogers,1989-10-08,Masculino,"Scientist, research (maths)",,False,0.0,Divorciado,4,603
+Julie Wallace,2001-11-05,Masculino,Video editor,,False,0.0,Solteiro,1,415
+Laurie Wood,1961-11-03,Feminino,Cartographer,2020-05-29,True,11216.01,Viúvo,1,435
+Troy Snyder,1975-12-16,Feminino,Cartographer,,False,0.0,Casado,3,720
+Ashley Howell,2002-12-07,Feminino,Publishing copy,2021-12-24,True,11995.33,Solteiro,0,593
+Robin Salazar,1970-03-15,Masculino,"Designer, blown glass/stained glass",2021-10-11,True,6058.92,Casado,2,533
+Charlene Gonzales,1956-08-17,Feminino,Retail buyer,2023-11-25,True,1369.75,Divorciado,3,328
+Gary Stone,1977-04-01,Masculino,"Geneticist, molecular",,False,0.0,Viúvo,5,636
+Jacob Garcia,1960-12-28,Masculino,"Therapist, sports",,False,0.0,Solteiro,4,537
+Dawn Washington,1983-03-15,Feminino,Personnel officer,2023-04-15,True,8929.31,Divorciado,0,615
+Christopher Camacho,1971-10-24,Masculino,Air cabin crew,,False,0.0,Divorciado,0,556
+Angela Lopez,1968-01-19,Masculino,"Scientist, research (physical sciences)",,False,0.0,Divorciado,4,703
+Alan Burnett,1963-11-11,Feminino,"Psychologist, sport and exercise",2016-05-29,True,1356.08,Divorciado,5,641
+Brady Huff,1981-04-13,Masculino,Comptroller,2024-07-16,True,10585.14,Divorciado,2,439
+Brittany Torres,1982-02-11,Feminino,Meteorologist,2019-05-19,True,5800.89,Casado,4,452
+Timothy Johnson,1997-10-12,Feminino,Press sub,,False,0.0,Divorciado,5,551
+Marvin Choi,1967-03-18,Masculino,Merchant navy officer,,False,0.0,Divorciado,2,668
+Erik Dickerson,1954-09-22,Masculino,Speech and language therapist,,False,0.0,Divorciado,5,523
+Dr. Penny Parsons DVM,1957-03-11,Masculino,"Designer, fashion/clothing",,False,0.0,Viúvo,2,308
+Samantha Stewart,1958-09-17,Masculino,Animal nutritionist,,False,0.0,Casado,5,470
+William Wilkins,1959-11-20,Feminino,Theme park manager,,False,0.0,Divorciado,0,304
+Benjamin Douglas,1970-08-19,Feminino,Counselling psychologist,2019-09-05,True,1386.29,Viúvo,0,843
+Craig Vaughan,1964-11-10,Feminino,Newspaper journalist,,False,0.0,Casado,0,326
+Brian Sims,1956-01-04,Masculino,Geophysical data processor,,False,0.0,Casado,1,455
+Laura Smith,1974-09-07,Masculino,Retail buyer,2023-08-03,True,9788.5,Casado,0,328
+Sydney Melendez,1962-07-26,Feminino,Stage manager,2019-02-17,True,11217.53,Viúvo,3,410
+Richard Bowers,2005-06-07,Feminino,Theatre director,,False,0.0,Viúvo,3,732
+Derrick Morris,1994-05-02,Feminino,"Designer, jewellery",,False,0.0,Casado,2,797
+Vanessa Chan,1966-05-12,Masculino,Sports administrator,2021-05-25,True,4073.15,Viúvo,0,403
+Ryan Perez,1956-02-19,Feminino,Warehouse manager,2017-11-16,True,12846.59,Viúvo,1,815
+Jonathan Velez,1975-01-15,Masculino,Bonds trader,2018-05-11,True,7567.14,Viúvo,3,311
+Nicole Sims,1980-05-17,Masculino,Adult guidance worker,,False,0.0,Casado,0,481
+Danny Murphy,1964-02-08,Masculino,TEFL teacher,2024-01-13,True,10954.04,Viúvo,4,796
+Norma Norton,1993-02-25,Masculino,Energy manager,2018-05-24,True,11233.85,Solteiro,3,754
+Tim Price,1959-12-07,Masculino,"Producer, radio",,False,0.0,Casado,4,309
+Sara Jones,1990-11-29,Feminino,Curator,2016-10-15,True,14117.8,Casado,5,696
+David Bryant,1979-10-21,Masculino,"Geologist, wellsite",2020-10-15,True,14356.26,Viúvo,3,781
+Christine Walter,2002-04-10,Masculino,Actuary,2020-04-25,True,7429.42,Divorciado,4,570
+Mrs. Joy Murray,1962-05-11,Feminino,Chief of Staff,2021-05-06,True,7759.91,Casado,5,321
+Louis Camacho,1992-04-24,Masculino,"Engineer, aeronautical",,False,0.0,Solteiro,0,733
+Amanda David,1996-06-22,Feminino,Product designer,2021-05-30,True,3253.52,Solteiro,0,325
+Brenda Costa,1978-12-31,Masculino,"Designer, ceramics/pottery",2021-11-15,True,9686.02,Divorciado,0,650
+Paige Johnson,1963-04-05,Feminino,Office manager,2022-08-15,True,10325.59,Divorciado,3,694
+Brian Young,1969-07-08,Feminino,Research scientist (life sciences),,False,0.0,Divorciado,3,729
+Andrew King,1960-03-11,Feminino,Secretary/administrator,,False,0.0,Solteiro,0,471
+Andrea Garcia,1969-03-08,Feminino,Midwife,,False,0.0,Solteiro,4,502
+Lori Gay,1981-07-11,Feminino,Actuary,,False,0.0,Casado,5,841
+Christian Oliver,1979-04-02,Masculino,Applications developer,2017-04-14,True,10779.71,Casado,5,554
+Jennifer Webb,1958-02-19,Feminino,Equities trader,2016-08-16,True,3133.65,Viúvo,2,468
+Adam Weiss,1979-01-15,Feminino,Holiday representative,,False,0.0,Casado,0,816
+Stephanie King,1960-09-25,Masculino,Occupational psychologist,2016-03-08,True,2340.11,Solteiro,0,841
+Caroline Adkins,1981-04-01,Feminino,Optometrist,,False,0.0,Solteiro,4,518
+Joseph Watson,1992-01-02,Feminino,Production engineer,,False,0.0,Casado,4,492
+Michael Simmons,1956-03-28,Masculino,"Lecturer, further education",2024-09-13,True,9793.04,Viúvo,4,311
+Monica Ruiz,1999-11-16,Feminino,Solicitor,,False,0.0,Divorciado,3,411
+Stephanie Miller,2003-10-03,Masculino,Garment/textile technologist,,False,0.0,Solteiro,5,759
+Miss Kimberly Fitzpatrick MD,1985-03-08,Masculino,Haematologist,,False,0.0,Divorciado,5,741
+Danny Cooper,1965-05-19,Masculino,"Accountant, chartered certified",,False,0.0,Casado,2,450
+John Mclaughlin,1955-11-10,Masculino,Technical author,,False,0.0,Viúvo,0,696
+Michael Wheeler,1961-04-23,Masculino,Insurance claims handler,2017-02-15,True,10124.31,Solteiro,2,411
+Travis Lee,1984-02-21,Feminino,"Psychologist, forensic",2024-02-15,True,7335.85,Solteiro,1,351
+Paul Bullock,1954-02-28,Masculino,Speech and language therapist,2021-11-05,True,12097.02,Divorciado,2,737
+Carol Craig,1959-12-28,Feminino,Environmental manager,2014-11-04,True,1384.28,Solteiro,2,420
+Matthew Morse DDS,1984-10-27,Masculino,Call centre manager,2015-12-04,True,7570.62,Casado,3,531
+Lance Fitzgerald,1986-03-31,Masculino,Oncologist,2016-05-24,True,5979.25,Divorciado,0,708
+Christopher Waller,1976-12-13,Feminino,"Scientist, research (medical)",2022-09-11,True,11229.04,Casado,4,528
+April Wallace,1998-09-29,Masculino,Press sub,2020-03-11,True,7376.06,Divorciado,4,753
+Brad Mclaughlin,1967-08-23,Feminino,Best boy,,False,0.0,Viúvo,0,395
+Ryan Roberts,1975-03-30,Feminino,"Copywriter, advertising",,False,0.0,Casado,0,320
+Amy Robertson,1955-05-17,Masculino,Water quality scientist,2022-11-10,True,5424.0,Casado,0,833
+Dr. Kevin Sanchez MD,1962-12-02,Feminino,Accounting technician,,False,0.0,Viúvo,2,509
+David Murray,1980-12-22,Feminino,Lexicographer,2019-09-29,True,4508.05,Casado,1,774
+Toni White,1978-05-28,Feminino,Financial adviser,,False,0.0,Solteiro,4,775
+Patricia Ross,1959-10-14,Feminino,Armed forces operational officer,,False,0.0,Solteiro,4,346
+Claudia Rice,1958-02-17,Masculino,"Designer, interior/spatial",,False,0.0,Viúvo,3,517
+Leslie Martin,1978-11-25,Masculino,Metallurgist,,False,0.0,Solteiro,0,430
+Micheal Moore,1986-12-06,Masculino,"Physicist, medical",,False,0.0,Solteiro,0,787
+Angela Rodriguez,1963-02-09,Masculino,Child psychotherapist,,False,0.0,Divorciado,2,843
+Dr. Pamela Schneider,1984-08-01,Feminino,Diplomatic Services operational officer,,False,0.0,Solteiro,0,330
+Shawn Sloan,1958-11-11,Feminino,Exercise physiologist,,False,0.0,Casado,0,634
+Denise Davidson,2003-01-29,Feminino,"Scientist, marine",,False,0.0,Viúvo,1,834
+Cody Griffith,1983-12-24,Feminino,Facilities manager,2024-01-03,True,13436.58,Casado,1,813
+Steven Bennett,1959-10-06,Feminino,Control and instrumentation engineer,2021-07-20,True,8393.12,Viúvo,3,620
+Eric Rogers,1996-03-04,Masculino,Theme park manager,,False,0.0,Viúvo,4,400
+Jeffrey Jenkins,1968-09-19,Masculino,Planning and development surveyor,,False,0.0,Viúvo,1,527
+John Griffin,1987-09-16,Feminino,"Designer, fashion/clothing",2019-09-07,True,10953.26,Casado,0,494
+Bethany Brown,1989-02-05,Feminino,Medical sales representative,,False,0.0,Solteiro,5,316
+Charles Jones,2003-03-31,Feminino,Marine scientist,2018-10-13,True,4725.4,Solteiro,4,590
+Joseph Perez,1956-09-27,Masculino,Accommodation manager,,False,0.0,Divorciado,0,551
+Monica Jones,2004-01-09,Feminino,Mental health nurse,,False,0.0,Casado,1,655
+Lisa Soto,1981-03-03,Masculino,"Engineer, chemical",2023-09-11,True,7783.65,Solteiro,1,708
+Theresa Williams,1984-02-25,Masculino,Air broker,,False,0.0,Divorciado,5,699
+Brenda Oneal,1965-07-12,Masculino,Music therapist,,False,0.0,Divorciado,2,664
+Erik Neal,1963-05-26,Feminino,Meteorologist,,False,0.0,Solteiro,0,494
+Timothy Kaufman,1973-01-08,Feminino,Learning mentor,2023-04-18,True,10706.58,Solteiro,4,605
+Daniel Fritz,1986-02-20,Masculino,Brewing technologist,2023-11-25,True,6431.0,Solteiro,2,610
+Amanda Shaffer,1966-12-04,Masculino,Theatre director,2021-03-12,True,13776.32,Casado,0,340
+April Bowers,1979-01-14,Feminino,"Radiographer, diagnostic",,False,0.0,Solteiro,2,686
+Mr. Peter Flowers,1961-12-10,Feminino,Medical technical officer,2019-06-21,True,9597.4,Viúvo,2,670
+Marissa Simmons,1969-06-03,Feminino,"Engineer, manufacturing",,False,0.0,Divorciado,0,611
+Emily Sanchez,1964-10-20,Masculino,Art gallery manager,,False,0.0,Solteiro,2,486
+Erika Sutton,1980-05-09,Feminino,Licensed conveyancer,2024-02-19,True,2809.2,Casado,1,635
+Courtney Levine,1955-04-01,Feminino,"Therapist, speech and language",,False,0.0,Viúvo,3,801
+Tasha Frazier,1972-10-25,Masculino,Musician,,False,0.0,Solteiro,4,436
+Linda Ortega,1998-05-20,Feminino,Secretary/administrator,,False,0.0,Viúvo,0,500
+Glen Watson,1966-11-26,Masculino,"Scientist, research (medical)",2023-09-30,True,2484.27,Solteiro,5,351
+Dr. James Vazquez Jr.,1962-08-04,Feminino,Company secretary,,False,0.0,Solteiro,0,439
+Brandon Hutchinson,1992-03-26,Masculino,"Teacher, primary school",,False,0.0,Divorciado,1,737
+Amanda Lee,1974-12-20,Masculino,"Engineer, manufacturing",,False,0.0,Viúvo,0,457
+Mark Hull,1964-05-22,Feminino,Theme park manager,2024-06-11,True,12152.06,Divorciado,3,306
+Joshua Avila,1956-02-16,Feminino,Tour manager,,False,0.0,Solteiro,0,573
+Briana Taylor,2006-07-17,Masculino,Aid worker,,False,0.0,Solteiro,3,637
+Peter Walker,1968-06-08,Masculino,"Accountant, chartered certified",2018-09-06,True,10247.65,Viúvo,2,578
+Sheila Bradshaw,2003-01-01,Feminino,Passenger transport manager,2023-05-17,True,7134.06,Viúvo,0,833
+Jessica Becker,2001-08-05,Feminino,Chartered loss adjuster,,False,0.0,Solteiro,4,306
+Mark Valdez,1991-12-10,Masculino,Actuary,2023-10-17,True,5583.3,Viúvo,3,394
+Jessica Snyder,1987-07-22,Feminino,Archaeologist,2020-11-29,True,13876.21,Casado,0,816
+Derek Mcconnell,2003-08-23,Masculino,Barista,2024-08-11,True,9720.73,Casado,3,804
+Jeffrey Chavez,1982-10-21,Feminino,Mudlogger,,False,0.0,Divorciado,1,629
+Mary Saunders,1961-11-12,Masculino,Dealer,2021-05-05,True,6756.39,Viúvo,4,754
+Lori Porter,1998-07-23,Masculino,"Teacher, special educational needs",,False,0.0,Divorciado,1,637
+Carolyn Thompson,2000-10-01,Masculino,Secondary school teacher,2016-07-07,True,9122.01,Casado,0,301
+Miguel Phillips,1988-06-02,Feminino,Translator,,False,0.0,Divorciado,0,493
+Patrick Bautista,2003-12-23,Masculino,Fashion designer,,False,0.0,Divorciado,3,649
+Catherine Perez,1975-12-18,Masculino,"Administrator, charities/voluntary organisations",,False,0.0,Solteiro,1,829
+Jason Weber,1991-06-09,Feminino,Electronics engineer,2015-09-21,True,3617.71,Solteiro,2,598
+Kevin Tanner,1989-04-24,Feminino,Petroleum engineer,2020-09-14,True,4808.53,Divorciado,5,769
+Miguel Tran,1994-06-01,Masculino,Public house manager,,False,0.0,Solteiro,4,405
+Heather Phillips,2002-08-27,Masculino,Secondary school teacher,,False,0.0,Divorciado,2,386
+Teresa Meyer,2003-09-19,Feminino,Passenger transport manager,,False,0.0,Divorciado,2,749
+Ryan Chen,1995-03-29,Masculino,Recruitment consultant,2022-01-09,True,7905.45,Solteiro,1,720
+Evelyn Nolan,1970-06-13,Masculino,"Lighting technician, broadcasting/film/video",2020-01-23,True,14839.33,Viúvo,2,344
+Phillip Ruiz,1981-09-16,Feminino,Social worker,2015-02-24,True,4788.03,Solteiro,3,597
+Joshua Reyes,1996-03-09,Feminino,"Surveyor, quantity",,False,0.0,Viúvo,1,832
+Jason White,2000-09-04,Masculino,Veterinary surgeon,2018-10-12,True,12513.79,Solteiro,3,784
+Anthony Rowland,1993-02-19,Masculino,Warden/ranger,2016-05-14,True,8728.55,Casado,5,761
+James Tran,2004-09-04,Feminino,Theatre stage manager,2022-12-21,True,11830.65,Divorciado,1,581
+Victor Knapp,1997-03-04,Feminino,Financial adviser,2021-07-16,True,11574.28,Viúvo,2,818
+Terry Garcia,1974-08-12,Masculino,Actuary,2022-03-22,True,11088.72,Viúvo,2,701
+Crystal Hancock,1962-03-23,Feminino,"Buyer, retail",2015-04-29,True,11797.33,Solteiro,0,764
+Brandon Bates,1976-07-14,Feminino,Estate agent,2017-06-08,True,1296.81,Solteiro,0,511
+George Lang,1968-04-25,Masculino,Science writer,,False,0.0,Viúvo,4,362
+Heather Smith,1978-02-14,Feminino,"Engineer, mining",2016-07-10,True,7936.64,Solteiro,5,602
+Jack Schneider,2004-07-04,Feminino,"Surveyor, quantity",2015-05-26,True,6831.39,Solteiro,3,538
+Derek Anderson,1998-07-15,Feminino,Mental health nurse,2021-10-02,True,9230.03,Casado,4,302
+Andre Torres,1973-01-29,Feminino,Chiropractor,2016-07-11,True,2698.32,Divorciado,1,735
