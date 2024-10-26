@@ -110,7 +110,7 @@ PLAINTEXT://b-2.myclusterkafka01.mjat97.c21.kafka.us-east-1.amazonaws.com:9092,P
 
 ## 16 - Testar a API:
 
-    - http://18.206.205.232:8082/topics/demo_topic_2
+    - http://18.206.205.232:8082/topics/demo_topic
 
 ## 17 - Postman:
 
