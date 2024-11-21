@@ -34,7 +34,7 @@ def main():
 
     topic = 'sales-transactions'
     producer = SerializingProducer({
-            'bootstrap.servers':'172.17.0.1:9092'
+            'bootstrap.servers':'127.0.0.1:9092'
         })
 
     while True:

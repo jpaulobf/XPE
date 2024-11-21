@@ -16,7 +16,7 @@ import java.sql.Timestamp;
 
 public class DataStreamJob {
 
-	static String jdbcUrl = "jdbc:postgresql://172.18.0.4:5432/postgres";
+	static String jdbcUrl = "jdbc:postgresql://172.18.0.3:5432/postgres";
 	static String username = "postgres";
 	static String password = "postgres";
 
