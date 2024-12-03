@@ -23,6 +23,4 @@ Módulo 4/Spark-Kafka/python/chk-point-dir/sources/*
 .idea/modules.xml
 .idea/vcs.xml
 .idea/XPE.iml
-Módulo 4/Desafio/Flink/java/FlinkCommerce/target/FlinkCommerce-*
-Módulo 4/Desafio/Flink/java/FlinkCommerce/target/original-FlinkCommerce-*
-Módulo 4/Desafio/Flink/java/FlinkCommerce/target/maven-archiver/pom.properties
+Módulo 4/Desafio/Flink/java/FlinkCommerce/target/*
