@@ -16,6 +16,7 @@ Desafio/Flink/java/FlinkCommerce/.idea/vcs.xml
 Módulo 4/Spark-Kafka/python/chk-point-dir/*
 Módulo 4/Spark-Kafka/python/chk-point-dir/offsets/*
 Módulo 4/Spark-Kafka/python/chk-point-dir/sources/*
+.idea/*
 .idea/compiler.xml
 .idea/encodings.xml
 .idea/jarRepositories.xml
