@@ -1,21 +1,28 @@
 package org.example.DTO;
 
 import java.sql.Timestamp;
+import java.util.Calendar;
 
 public class Transaction {
 
-    String transactionId;
-    String productId;
-    String productName;
-    String productCategory;
-    double productPrice;
-    int productQuantity;
-    String productBrand;
-    String currency;
-    String customerId;
-    Timestamp transactionDate;
-    String paymentMethod;
-    double totalAmount;
+    private String transactionId;
+    private String productId;
+    private String productName;
+    private String productCategory;
+    private double productPrice;
+    private int productQuantity;
+    private String productBrand;
+    private String currency;
+    private String customerId;
+    private Timestamp transactionDate;
+    private String paymentMethod;
+    private double totalAmount;
+
+    public int getMonth() {
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(transactionDate.getTime());
+        return cal.get(Calendar.MONTH);
+    }
 
     public Transaction() {
     }
