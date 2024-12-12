@@ -1,3 +1,4 @@
+version: '3'
 services:
 
   jobmanager:
@@ -72,7 +73,7 @@ services:
       - "/etc/localtime:/etc/localtime:ro"
 
   postgres:
-    image: postgres:latest
+    image: postgres:13.2
     container_name: postgres
     ports:
       - "5432:5432"
