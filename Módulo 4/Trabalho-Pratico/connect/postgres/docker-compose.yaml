@@ -1,8 +1,7 @@
-version: '2.1'
 services:
 
   postgres:
-    image: postgres:13.2
+    image: postgres
     ports:
       - 5432:5432
     hostname: postgres
